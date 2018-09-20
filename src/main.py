@@ -64,6 +64,7 @@ class SlackRos():
         return (matches.group(1), matches.group(2).strip()) if matches else (None, None)
 
     def handle_command(self, command, channel):
+        response = ''
         if command == 'start':
             self.channel_id = channel
             response = 'You reset my current channel.'
